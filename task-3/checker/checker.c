@@ -7,7 +7,6 @@
 #define MAX_WORD_LEN            100
 
 void get_words(char *s, char **words, int number_of_words);
-int compare(const void *s1, const void *s2);
 void sort(char **words, int number_of_words, int size);
 
 int main() {
@@ -20,7 +19,6 @@ int main() {
     }
     fgets(s, MAX_INPUT_STRING_LEN, stdin);
     get_words(s, words, number_of_words);
-    //qsort(words, number_of_words, sizeof(char*), compare);
     sort(words, number_of_words, sizeof(char *));
     for (int i = 0; i < number_of_words; i++) {
         printf("%s\n", words[i]);
